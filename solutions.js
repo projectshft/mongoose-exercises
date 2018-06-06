@@ -1,11 +1,11 @@
 // var personSchema = new Schema({
-// 	hair: String,
-// 	eyes: String,
-// 	weight: Number,
-// 	height: Number,
-// 	salary: Number,
-// 	numKids: Number,
-// 	kids: []
+//  hair: String,
+//  eyes: String,
+//  weight: Number,
+//  height: Number,
+//  salary: Number,
+//  numKids: Number,
+//  kids: []
 // });
 
 
@@ -107,10 +107,10 @@ Person.find( { $or:[ {height:{"$gt":180}},
 //======================================================
 //======================================================
 Person.find().and([
-		{ $or: [{hair:"grey"}, {eyes:"grey"}] },
-		{	weight:{"$lt": 70}	}
-	]).exec((err, people) => {
-		console.log(people);
+    { $or: [{hair:"grey"}, {eyes:"grey"}] },
+    {	weight:{"$lt": 70}	}
+  ]).exec((err, people) => {
+    console.log(people);
 });
 
 
@@ -125,12 +125,11 @@ Person.find().and([
 //======================================================
 //======================================================
 Person.find({kids:{$elemMatch:{hair:"grey"}}}).exec((err,people) => {
-
-	//this is just to show you that this works
-	for (p in people) {
-		let person = people[p];
-		console.log("Person", p,"has kids:\n",person.kids);
-	}
+//this is just to show you that this works
+  for (p in people) {
+    let person = people[p];
+    console.log("Person", p,"has kids:\n",person.kids);
+  }
 });
 
 
@@ -144,12 +143,12 @@ Person.find({kids:{$elemMatch:{hair:"grey"}}}).exec((err,people) => {
 //======================================================
 //======================================================
 Person.find().and([
-		{weight: {"$gt":100}},
-		{kids:{$elemMatch:{weight: {"$gt":100}}}}
-	]).exec((err, people) => {
-		//this is just to show you that this works
-		for (p in people) {
-			let person = people[p];
-			console.log("\nPerson", p,"has weight", person.weight," and kids:\n",person.kids);
-		}
+    {weight: {"$gt":100}},
+    {kids:{$elemMatch:{weight: {"$gt":100}}}}
+  ]).exec((err, people) => {
+    //this is just to show you that this works
+    for (p in people) {
+  	  let person = people[p];
+      console.log("\nPerson", p,"has weight", person.weight," and kids:\n",person.kids);
+    }
 });
