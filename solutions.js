@@ -148,7 +148,7 @@ Person.find().and([
   ]).exec((err, people) => {
     //this is just to show you that this works
     for (p in people) {
-  	  let person = people[p];
+      let person = people[p];
       console.log("\nPerson", p,"has weight", person.weight," and kids:\n",person.kids);
     }
 });
