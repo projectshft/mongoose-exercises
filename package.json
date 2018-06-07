@@ -1,0 +1,26 @@
+{
+  "name": "mongoose-exercises",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/projectshft/mongoose-exercises.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/projectshft/mongoose-exercises/issues"
+  },
+  "homepage": "https://github.com/projectshft/mongoose-exercises#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mongoose": "^5.1.4",
+    "request": "^2.87.0"
+  }
+}
