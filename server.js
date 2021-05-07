@@ -35,7 +35,7 @@ const loadFromAPI = (apiURL) => {
 
       const book = new Book({
         title: resBook.title,
-        author: resBook.authors[0],
+        author: resBook.authors ? resBook.authors[0] : null,
         pages: resBook.pageCount,
         genres: resBook.categories || ["Other"],
         rating: resBook.averageRating || 5
