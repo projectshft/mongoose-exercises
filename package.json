@@ -19,7 +19,7 @@
   "homepage": "https://github.com/projectshft/mongoose-exercises#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "mongoose": "^5.1.4",
     "request": "^2.87.0"
   }
